@@ -96,7 +96,7 @@ async def buscar_producto(id: str):
         raise HTTPException(status_code=404,
                             detail="El producto no existe")
     producto_out = ProductoOut(**producto_in_db.dict())
-    return producto_out   
+    return producto_out  
 
 @api.get("/producto/lista/")
 async def buscar_productos():
