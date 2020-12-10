@@ -9,6 +9,7 @@ class ProductoOut(BaseModel):
     nombre: str
     precio: int
     cantidad: int
+    categoria: str
 
 class ProductoInCreate(BaseModel):
     id: str
