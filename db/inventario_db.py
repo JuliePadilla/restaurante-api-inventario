@@ -9,14 +9,14 @@ class ProductoInDB(BaseModel):
     categoria: str
 
 database_productos = {
-    'CA01': ProductoInDB(**{"id": 'CA01',
+    "CA01": ProductoInDB(**{"id": "CA01",
                                 "nombre":"Churrasco",
                                 "precio":17000,
                                 "cantidad":10,
                                 "categoria":"Carnes",
                                 }),
 
-    'PE01': ProductoInDB(**{"id": 3007894561,
+    "PE01": ProductoInDB(**{"id": PE01,
                                 "nombre":"Trucha frita",
                                 "precio":22000,
                                 "cantidad":15,

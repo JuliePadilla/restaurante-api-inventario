@@ -81,7 +81,13 @@ async def delete_cliente(cliente_in: ClienteIn):
     cliente_out = eliminate_cliente(cliente_in_db)
     return cliente_out
 
-#####Productos
+#####Inventario
+
+@api.post("/producto/crear/") 
+async def crear_producto(producto_in: ProductoInCreate):
+    producto_in_db = create_producto(producto_in)
+    producto_out = ProductoOut(**producto_in_db.dict())
+    return producto_out
 
 @api.get("/producto/consulta/{id}")
 async def buscar_producto(id: str):
@@ -100,12 +106,6 @@ async def buscar_productos():
         producto_out = ProductoOut(**producto.dict())
         producto_out.append(producto_out)
     return productos_out
-
-@api.post("/producto/crear/") 
-async def crear_producto(producto_in: ProductoInCreate):
-    producto_in_db = create_producto(producto_in)
-    producto_out = ProductoOut(**producto_in_db.dict())
-    return producto_out
 
 @api.put("/producto/update/")
 async def update_producto(producto_in: ProductoInCreate):
