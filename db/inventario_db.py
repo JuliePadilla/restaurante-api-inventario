@@ -16,7 +16,7 @@ database_productos = {
                                 "categoria":"Carnes",
                                 }),
 
-    "PE01": ProductoInDB(**{"id": PE01,
+    "PE01": ProductoInDB(**{"id": "PE01",
                                 "nombre":"Trucha frita",
                                 "precio":22000,
                                 "cantidad":15,
